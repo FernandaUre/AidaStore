@@ -1,0 +1,97 @@
+@import "variables";
+@import "footer";
+
+@mixin medidas {
+    font-size: 30px;
+    margin-top: 60px;
+    padding: 40px;
+    font-weight: 700;
+}
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: $fuente;
+
+    grid-template-areas: 
+    "header nav"
+    "main"
+    "footer"
+    ;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+.div-contacto {
+    margin-top: 200px;
+    h4 {
+        text-align: center;
+        font-style: bold;
+        font-weight: 700;
+        color: #000000;
+        font-size: 40px;
+    } 
+    p {
+        font-weight: 300;
+        color: #000000;
+        font-size: 18px;
+        padding: 10px;
+    }    
+}
+
+.div-envios {
+    font-family: $fuente;
+    font-weight: 200;
+    font-size: 22px;
+    h5 {
+        @include medidas;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+.div-pagos {
+    @extend .div-envios;
+    h5 {
+       @include medidas;
+    }
+}
+
+.titulo-productos h4 {
+    margin: 25px;
+    padding: 30px;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        background-color: $color-primary;
+    }
+}
+
+$fuentes: (
+    chica: 22px,
+    mediana: 30px, 
+    grande: 40px,
+);
+
+@each $fuente, $font in $fuentes {
+    .p-#{$fuente} {
+        font-size: $fuente;
+    }
+}
+
+
