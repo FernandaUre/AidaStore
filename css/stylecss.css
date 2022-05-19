@@ -11,17 +11,7 @@ footer {
 
 body {
   background-color: white;
-  font-family: "Poppins", sans-serif;
-  grid-template-areas: "header nav" "main" "footer"; }
-
-header {
-  grid-area: header; }
-
-nav {
-  grid-area: nav; }
-
-main {
-  grid-area: main; }
+  font-family: "Poppins", sans-serif; }
 
 .div-contacto {
   margin-top: 200px; }
@@ -64,7 +54,41 @@ main {
 
 @media screen and (max-width: 768px) {
   body {
-    background-color: #FBDCE2; } }
+    background-color: #1E1E24; }
+    body .div-ingresos {
+      grid-template-columns: repeat(3, 1fr);
+      border-radius: 50px; }
+      body .div-ingresos img {
+        height: 200px;
+        width: 200px;
+        object-fit: contain; }
+      body .div-ingresos h4 {
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 50px;
+        color: #bebebe; } }
+
+@media screen and (max-width: 425px) {
+  body {
+    background-color: #1E1E24; }
+    body .div-ingresos {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 3px;
+      border-radius: 30px; }
+      body .div-ingresos img {
+        height: 130px;
+        width: 130px;
+        margin: 5px 10px 5px 2px;
+        object-fit: contain; }
+      body .div-ingresos h4 {
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 40px;
+        margin-left: 5px;
+        color: #bebebe; } }
 
 .p-chica {
   font-size: chica; }
@@ -74,3 +98,32 @@ main {
 
 .p-grande {
   font-size: grande; }
+
+.div-ingresos {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 18px;
+  background-color: #797b845d;
+  border: 1px;
+  border-radius: 100px; }
+  .div-ingresos ul {
+    list-style: none; }
+  .div-ingresos a {
+    text-decoration: none; }
+  .div-ingresos img {
+    height: 550px;
+    width: 550px;
+    object-fit: contain;
+    padding: 5px;
+    margin: 30px 30px 30px 30px; }
+  .div-ingresos h4 {
+    display: flex;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 260px;
+    margin-left: 100px;
+    color: #373636; }
+  .div-ingresos h4:hover {
+    color: rgba(55, 54, 54, 0.636); }
