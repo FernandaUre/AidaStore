@@ -1,0 +1,27 @@
+.grid-pagos {
+    display: grid;
+    grid-template-columns: 1100px;
+    margin-top: 100px;
+    justify-content: center;
+    .div-pagos {
+        box-shadow: 10px 10px 5px #343a40;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        animation-iteration-count: initial;
+        background-color: #212529;
+        border-radius: 50px;
+    h5 {
+        @include medidas;
+        text-align: center;
+        color: #f8f9fa;
+        margin: 40px 10px 10px 10px;
+        padding: 10px;
+     }
+    p {
+        font-size: 16px;
+        text-align: left;
+        margin: 50px;
+        color: #f8f9fa;
+    }
+    }
+}

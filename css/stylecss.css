@@ -1,95 +1,3 @@
-footer {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 200;
-  margin-top: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-body {
-  background-color: white;
-  font-family: "Poppins", sans-serif; }
-
-.div-contacto {
-  margin-top: 200px; }
-  .div-contacto h4 {
-    text-align: center;
-    font-style: bold;
-    font-weight: 700;
-    color: #000000;
-    font-size: 40px; }
-  .div-contacto p {
-    font-weight: 300;
-    color: #000000;
-    font-size: 18px;
-    padding: 10px; }
-
-.div-envios, .div-pagos {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-size: 22px; }
-  .div-envios h5, .div-pagos h5 {
-    font-size: 30px;
-    margin-top: 60px;
-    padding: 40px;
-    font-weight: 700; }
-  .div-envios p, .div-pagos p {
-    font-size: 20px; }
-
-.div-pagos h5 {
-  font-size: 30px;
-  margin-top: 60px;
-  padding: 40px;
-  font-weight: 700; }
-
-.titulo-productos h4 {
-  margin: 25px;
-  padding: 30px;
-  text-align: left;
-  font-size: 35px;
-  font-weight: 700; }
-
-@media screen and (max-width: 768px) {
-  body {
-    background-color: #1E1E24; }
-    body .div-ingresos {
-      grid-template-columns: repeat(3, 1fr);
-      border-radius: 50px; }
-      body .div-ingresos img {
-        height: 200px;
-        width: 200px;
-        object-fit: contain; }
-      body .div-ingresos h4 {
-        display: flex;
-        font-size: 15px;
-        text-align: center;
-        margin-top: 100px;
-        margin-left: 50px;
-        color: #bebebe; } }
-
-@media screen and (max-width: 425px) {
-  body {
-    background-color: #1E1E24; }
-    body .div-ingresos {
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 3px;
-      border-radius: 30px; }
-      body .div-ingresos img {
-        height: 130px;
-        width: 130px;
-        margin: 5px 10px 5px 2px;
-        object-fit: contain; }
-      body .div-ingresos h4 {
-        display: flex;
-        font-size: 15px;
-        text-align: center;
-        margin-top: 40px;
-        margin-left: 5px;
-        color: #bebebe; } }
-
 .p-chica {
   font-size: chica; }
 
@@ -99,31 +7,154 @@ body {
 .p-grande {
   font-size: grande; }
 
-.div-ingresos {
-  margin: 20px;
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.grid-contacto {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 18px;
-  background-color: #797b845d;
-  border: 1px;
-  border-radius: 100px; }
-  .div-ingresos ul {
+  grid-template-columns: 1100px;
+  margin-top: 100px;
+  justify-content: center; }
+  .grid-contacto .contacto-box {
+    box-shadow: 10px 10px 5px #343a40;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    background-color: #e0e1dd;
+    border-radius: 50px; }
+    .grid-contacto .contacto-box h4 {
+      text-align: center;
+      font-weight: 700;
+      color: #343a40;
+      font-size: 40px;
+      margin: 40px 10px 10px 10px;
+      padding: 10px; }
+    .grid-contacto .contacto-box h6 {
+      text-align: center;
+      font-size: 16px; }
+    .grid-contacto .contacto-box p {
+      margin: 25px;
+      font-size: 16px;
+      text-align: left; }
+  .grid-contacto .formulario-contacto {
+    margin: 30px; }
+
+.titulo-productos h4 {
+  margin: 25px;
+  padding: 30px;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 700;
+  color: #e0e1dd; }
+
+.grid-envios {
+  display: grid;
+  grid-template-columns: 1100px;
+  margin-top: 100px;
+  justify-content: center; }
+  .grid-envios .div-envios {
+    box-shadow: 10px 10px 5px #343a40;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    background-color: #e0e1dd;
+    border-radius: 50px; }
+    .grid-envios .div-envios h5 {
+      font-size: 30px;
+      margin-top: 60px;
+      padding: 40px;
+      font-weight: 700;
+      text-align: center;
+      color: #343a40;
+      margin: 40px 10px 10px 10px;
+      padding: 10px; }
+    .grid-envios .div-envios p {
+      font-size: 16px;
+      text-align: left;
+      margin: 50px; }
+
+.grid-pagos {
+  display: grid;
+  grid-template-columns: 1100px;
+  margin-top: 100px;
+  justify-content: center; }
+  .grid-pagos .div-pagos {
+    box-shadow: 10px 10px 5px #343a40;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    background-color: #212529;
+    border-radius: 50px; }
+    .grid-pagos .div-pagos h5 {
+      font-size: 30px;
+      margin-top: 60px;
+      padding: 40px;
+      font-weight: 700;
+      text-align: center;
+      color: #f8f9fa;
+      margin: 40px 10px 10px 10px;
+      padding: 10px; }
+    .grid-pagos .div-pagos p {
+      font-size: 16px;
+      text-align: left;
+      margin: 50px;
+      color: #f8f9fa; }
+
+body {
+  background-color: #495057;
+  font-family: "Poppins", sans-serif; }
+
+nav {
+  text-align: center; }
+
+.div-grid {
+  display: grid;
+  grid-template-columns: 700px;
+  justify-content: center;
+  margin-top: 50px; }
+  .div-grid .div-ingresos {
+    margin: 20px;
+    background-color: #e0e1dd;
+    border: 1px;
+    border-radius: 100px;
+    box-shadow: 10px 10px 5px #343a40;
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: initial; }
+  .div-grid ul {
     list-style: none; }
-  .div-ingresos a {
+  .div-grid a {
     text-decoration: none; }
-  .div-ingresos img {
-    height: 550px;
-    width: 550px;
-    object-fit: contain;
-    padding: 5px;
-    margin: 30px 30px 30px 30px; }
-  .div-ingresos h4 {
-    display: flex;
+  .div-grid h4 {
     font-size: 35px;
     font-weight: 700;
     text-align: center;
-    margin-top: 260px;
-    margin-left: 100px;
-    color: #373636; }
-  .div-ingresos h4:hover {
-    color: rgba(55, 54, 54, 0.636); }
+    color: #495057;
+    margin-top: 10px;
+    margin-right: 25px; }
+  .div-grid h4:hover {
+    color: #f8edeb; }
+
+.img-ingresos {
+  display: flex;
+  justify-content: center;
+  animation-name: aparecer;
+  animation-duration: 3s; }
+  .img-ingresos img {
+    width: 400px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 5px #292c30; }
+
+footer {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 370px;
+  color: #f8f9fa; }
+  footer h5 {
+    margin: 15px;
+    padding: 25px; }

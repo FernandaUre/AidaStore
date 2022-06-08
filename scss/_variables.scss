@@ -1,4 +1,33 @@
-$color-primary: #1E1E24;
+$color-primary: #ffffff;
+
 $fuente: 'Poppins', sans-serif;
+
 $tamaño-fuente: 700;
 
+$fuentes: (
+    chica: 22px,
+    mediana: 30px, 
+    grande: 40px,
+);
+
+@each $fuente, $font in $fuentes {
+    .p-#{$fuente} {
+        font-size: $fuente;
+    }
+}
+
+@mixin medidas {
+    font-size: 30px;
+    margin-top: 60px;
+    padding: 40px;
+    font-weight: 700;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
